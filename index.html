@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блог</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="blog-title">Добро пожаловать в MyBlog</h1>
+    </header>
+    <main>
+      
+        <section id="auth-section">
+            <h2>Регистрация/Вход пользователя</h2>
+            <input type="text" id="username" placeholder="Имя пользователя"><br>
+            <input type="password" id="password" placeholder="Пароль"><br>
+            <button id="register-btn">Зарегистрироваться/Войти</button>
+        </section>
+
+      
+        <section id="post-section" style="display:none;">
+            <h2>Создать пост</h2>
+            <textarea id="post-content" placeholder="Напишите свой пост здесь"></textarea><br>
+
+            <label for="post-visibility">Видимость:</label>
+            <select id="post-visibility">
+                <option value="public">Публичный</option>
+                <option value="private">Приватный</option>
+            </select><br>
+
+            <label for="post-tags">Теги (через запятую):</label>
+            <input type="text" id="post-tags" placeholder="Добавьте теги, разделенные запятой"><br>
+
+            <button id="post-btn">Опубликовать</button>
+        </section>
+
+       
+        <section id="posts-feed" style="display:none;">
+            <h2>Лента постов</h2>
+            <div id="posts"></div>
+        </section>
+
+       
+        <section id="subscription-section" style="display:none;">
+            <h2>Подписка на пользователей</h2>
+            <input type="text" id="subscribe-user" placeholder="Имя пользователя для подписки">
+            <button id="subscribe-btn">Подписаться</button>
+            <div id="subscribed-list"></div>
+        </section>
+
+      
+        <section id="search-section" style="display:none;">
+            <h2>Поиск по тегам</h2>
+            <input type="text" id="tag-search" placeholder="Поиск по тегам">
+            <button id="search-btn">Поиск</button>
+            <div id="search-results"></div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
